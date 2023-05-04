@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <button>Linus Torvalds</button>
+    <!-- nvidia fuck you -->
+    <button>Hikaru Nakamura</button>
+    <!-- can also trade and take and take and it
+takes I take if takes takes takes Queen
+E2 Queen h4g3 Knight G3 check C6 Queen
+B7 Knight H1 King there
+I don't know what's going on I'm just
+gonna Castle I don't want to think too -->
+    <button>Levi Rozman</button>
+    <!-- no yes no yes -->
+    <button>Цунетомо Ямамото</button>
+    <!-- Не потрібно бути весь час насторожі. Потрібно вважати, що ти вже мертвий. -->
+
+    <button>Oscar Wilde</button>
+    <!-- Be yourself; everyone else is already taken. -->
+    <script>
+      const quotes = [
+        "nvidia fuck you.",
+        `can also trade and take and take and it takes I take if takes takes takes Queen E2 Queen h4g3 Knight G3 check C6 Queen B7 Knight H1 King there I don't know what's going on I'm just gonna Castle I don't want to think too.`,
+        "no yes no yes.",
+        "Не потрібно бути весь час насторожі. Потрібно вважати, що ти вже мертвий.",
+        "Be yourself; everyone else is already taken.",
+      ];
+      document.querySelectorAll("button").forEach((el, i) => {
+        el.onclick = () => alert(quotes[i]);
+      });
+    </script>
+  </body>
+</html>

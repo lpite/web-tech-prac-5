@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    const constants = [
+      { text: "Значення константи е", num: Math.E },
+      { text: "Значення константи π", num: Math.PI },
+      {
+        text: "Десятковий логарифм постійної Ейлера (е)",
+        num: Math.log10(Math.E),
+      },
+      {
+        text: "Двійковий логарифм постійної Ейлера (е)",
+        num: Math.log2(Math.E),
+      },
+      { text: "Натуральний логарифм числа 10", num: Math.log(10) },
+      { text: "Натуральний логарифм числа 2", num: Math.log(2) },
+      { text: "Корінь квадратний із двох ", num: Math.sqrt(2) },
+      { text: "Корінь квадратний з однієї другої", num: Math.sqrt(1 / 2) },
+    ];
+    const funcs = [
+      {
+        text: "Результат округлення числа 1,00123 у більшу сторону",
+        num: Math.ceil(1.0012),
+      },
+      {
+        text: "Результат округлення числа -3.1234 у більшу сторон",
+        num: Math.ceil(-3.1234),
+      },
+      {
+        text: "езультат округлення числа 1,00123 у меншу сторону",
+        num: Math.floor(1, 00123),
+      },
+      {
+        text: "Результат округлення числа -3.1234 у меншу сторону",
+        num: Math.floor(-3.123),
+      },
+      {
+        text: "Результат округлення числа 1,44 за правилами арифметики",
+        num: Math.round(1.44),
+      },
+    ];
+    const ul = document.createElement("ul");
+    const ul2 = document.createElement("ul");
+
+    constants.forEach((el) => {
+      const li = document.createElement("li");
+      li.textContent = `${el.text} = ${el.num}`;
+      ul.appendChild(li);
+    });
+    document.body.appendChild(ul);
+
+    funcs.forEach((el) => {
+      const li = document.createElement("li");
+      li.textContent = `${el.text}: y = ${el.num}`;
+      ul2.appendChild(li);
+    });
+    document.body.appendChild(ul2);
+  </script>
+</html>
