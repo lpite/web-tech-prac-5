@@ -10,20 +10,44 @@
     <div>
       <label>
         from
-        <input type="range" max="0" min="-10" value="-6" id="from_range" />
+        <input type="number" max="0" min="-10" value="-6" id="from_range" />
       </label>
       <label>
         to
-        <input type="range" max="10" min="0" value="6" id="to_range" />
+        <input type="number" max="10" min="0" value="6" id="to_range" />
       </label>
       <label>
-        x
-        <input type="number" min="0.1" value="1" />
+        step
+        <input type="number" min="0.1" value="1"  id="step" />
       </label>
+      <button id="button">Count</button>
     </div>
+    <ul id="list">
+
+    </ul>
     <script>
       const fromRange = document.querySelector("#from_range");
       const toRange = document.querySelector("#to_range");
+      const stepInput = document.querySelector("#step");      
+      const list = document.querySelector("#list");
+      const button = document.querySelector("#button");
+
+      button.addEventListener("click",()=>{
+        list.innerHTML = ""
+        for (let x = parseFloat(fromRange.value); x < parseFloat(toRange.value)+(parseFloat(stepInput.value)/2); x+=parseFloat(stepInput.value)) {
+          const li = document.createElement("li");
+          if (x<2) {
+            li.innerText = Math.sin(x) + Math.cos(x);
+            
+          }else if(x==2){
+            li.innerText = Math.pow(x,4.1);
+
+          }else{
+            li.innerText = Math.log(x) + Math.sqrt(x);
+          }
+          list.appendChild(li)
+        }
+      })
     </script>
   </body>
 </html>
