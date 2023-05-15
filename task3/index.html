@@ -61,6 +61,14 @@
       li.textContent = `${el.text}: y = ${el.num}`;
       ul2.appendChild(li);
     });
-    document.body.appendChild(ul2);
+    document.body.appendChild(ul2)
+   ;
+ 
+  function randNum(min, max) { // min and max included 
+  return Math.floor(Math.random() * (max - min + 1) + min);
+  }
+    
+    const newSpan = document.createElement("span");
+    newSpan.textContent = randNum(0,1);
   </script>
 </html>
